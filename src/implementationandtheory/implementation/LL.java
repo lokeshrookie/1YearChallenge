@@ -6,6 +6,9 @@ public class LL {
     private Node head;
     private int size;
 
+    public Node getHead() {
+        return head;
+    }
 
     public LL(){
         this.size = 0;
@@ -22,6 +25,19 @@ public class LL {
         }
         System.out.println("End");
     }
+
+    // Display from given node.
+    public void display(Node node){
+        while(node != null){
+            System.out.print(node.value + "-> ");
+            node =  node.next;
+        }
+        System.out.println("END");
+    }
+
+
+
+
     // Insert first
 
     public int insertFirst(int value){
@@ -31,6 +47,11 @@ public class LL {
             size++;
             return value;
     }
+
+
+
+
+
     // Insert last
 
     public int inserLast(int value){
@@ -119,16 +140,7 @@ public class LL {
     }
 
 
-
-
-
-
-
-
-
-
-
-
+    // Linkedlist node class
 
     private class Node{
         private  int value;
@@ -145,6 +157,23 @@ public class LL {
         }
     }
 
+
+
+    // find the middle of linked list of given head.
+    public Node findMiddle( Node head){
+        if(head == null || head.next == null){
+            return head;
+        }
+        Node temp = head;
+        Node slow = temp;
+        Node fast = temp;
+        while(fast != null && fast.next != null){
+            slow  = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+        
+    }
 
 
 

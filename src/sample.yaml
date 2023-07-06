@@ -1,0 +1,60 @@
+#First file about YAML
+
+
+#title and name are keys and Lokesh is value.
+
+title : YAML Ain't Markup Language
+name: Lokesh Darapureddy
+profession: Software Engineer
+#Learn is a key with list.
+learn:
+  - Basic Data Structure
+  - Commenting
+
+
+#Array can be written as two types in YAML
+# InLine Style
+
+#hobbies: ["Biking", "Photography", "Blogging"]
+
+#Individual Style
+hobbies:
+  - Biking
+  - Photography
+  - Blogging
+  - Kick Boxing
+
+#Complex List : List Element contains another list.
+persons:
+  - firstname: Lokesh
+    lastname: Darapureddy
+    age: 23
+  - firstname: Anil
+    lastname: Deyyala
+    age: 24
+  - firstname: Ram
+    lastname: teja
+    age: 23
+
+#Using ">"  and for multiline value
+software: jenkins
+description: >
+  "Jenkins is a devops tool which is used to build ci/cd pipelines for simple
+  to complex web applications to automate and build, test and deploy stages."
+
+
+address: |
+  Darapureddy Lokesh
+  rocklinglokesh@gmail.com
+  111-222-1234
+  
+  |+ this is an extra line.
+  
+  
+
+#Anchor
+#You would have heard from lot of people saying don’t
+#repeat yourself. What if you have a value in your YAML
+#file and want to use it at another place in your file.
+#Anchor can help you with getting those value without
+#repeating yourself.
